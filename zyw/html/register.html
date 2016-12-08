@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../css/public.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/zxy_common.css"/>
+	<link rel="stylesheet" href="../lib/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="../font/commonFont/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="../css/register.css"/>
+</head>
+<body>
+	<!--头部-->
+	<header>
+		<div class="title"><a href="myXiu.html" class="return">&lt;</a>登录<i class="login">注册</i></div>
+		<!--<div class="search">
+			<div class="searchInput">
+				<i class="iconfont icon-sousuolan-sousuo"></i>请输入搜索内容
+			</div>
+		</div>-->
+	</header>
+	<!--内容部分-->
+	<section style="margin-top:.86rem">
+		<div class="f-registerBox">
+			<p class="f-registerMsg"><input type="text" name="account" id="account" placeholder="账号" /><i>只能中英文，数字，下划线，减号，4~16字符</i></p>
+			<p class="f-registerMsg"><input type="password" name="pwd" id="pwd" placeholder="密码" /><i>只能包含字符、数字和下划线,6~16位字符</i></p>
+			<p class="f-registerMsg f-registerAboutPwd"><b class="f-remindPwd active" id="remindPwd"></b>记住密码 <a href="" class="f-forgetPwd">忘记密码?</a></p>
+			<p class="f-registerMsg"><input type="button" class="f-registerBtn" value="登录" id="registerBtn" /></p>
+		</div>
+	</section>
+	<!--尾部-->
+	<footer>
+		<p class="footer-list"><i class="iconfont icon-shouyeshouye"></i><b class="footlist-name">首页</b></p>
+		<p class="footer-list"><i class="iconfont icon-wefill"></i><b class="footlist-name">分类</b></p>
+		<p class="footer-list"><i class="iconfont icon-cart"></i><b class="footlist-name">购物车</b></p>
+		<p class="footer-list active"><i class="iconfont icon-peoplelist"></i><b class="footlist-name">我的秀</b></p>
+		<p class="footer-list"><i class="iconfont icon-faxian2-copy"></i><b class="footlist-name">更多</b></p>
+	</footer>
+	<script src="../lib/zepto.min.js"></script>
+	<script src="../lib/iscroll.js"></script>
+	<script src="../lib/swiper.min.js"></script>
+	<script type="text/javascript" src="../js/homepage.js"></script>
+	<script type="text/javascript">
+    	document.documentElement.style.fontSize= document.documentElement.clientWidth/100 * 15.625 + "px";
+   		document.addEventListener('plusready', function(){
+   			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+   			
+   		});
+   		$('#remindPwd').on('touchend',function(){
+   			$(this).toggleClass('active')
+   		})
+   		//----------------------------------------------------------------失去焦点
+//id为input的id  失去焦点事件    zz 为正则表达式------------
+     function checkBlur(id,zz){
+     	var oId = $("#"+id)
+   		var v =  oId.val();
+   		if(v == ""){
+   			 oId.siblings("i").css("display","block") 
+           return false;
+     	}
+     	var reg = zz
+     	console.log(reg)
+     	if(reg.test(v)){
+     		 oId.siblings("i").css("display","none");
+     		 return true;
+     	}else{
+     		 oId.siblings("i").css("display","block");
+     		 return false;
+     	}
+     }
+//------------------------------------------------------------得到焦点
+	function checkFocus(){
+     	$(this).siblings("i").css("display","none");
+     	console.log($(this))
+//   	if($(this).context.id == "pwd"){
+//   		$("#rPwd").val("")
+//   	}
+	}
+	
+//	1----------------------------------------------手机号码验证  邮箱地址
+	var sjyz = /^[A-Za-z0-9-_]{4,16}$/;
+	$("#account").blur(function(){checkBlur("account",sjyz)});
+	$("#account").focus(checkFocus); 
+//  2---------------------------------------------密码验证
+	var szmm = /^[a-zA-Z0-9_-]{6,16}$/
+	$("#pwd").blur(function(){checkBlur("pwd",szmm)});
+	$("#pwd").focus(checkFocus); 
+//   3 -------------------------------------------------
+//  3 ---------------------------------------登录提交
+	$('#registerBtn').on('touchstart',function(){
+		if(checkBlur("account",sjyz)&&checkBlur("pwd",szmm)){
+			var account = $("#account").val();
+			var pwd = $("#pwd").val();
+			$.ajax({
+					type: "GET",
+					url: "http://datainfo.duapp.com/shopdata/userinfo.php?status=login&userID=" + account + "&password=" + pwd ,
+					async: true,
+					dataType: "json",
+					success: function(data){
+						console.log(data);
+//						if(data == 1){
+//							alert("注册成功")
+//							//localStorage
+//							
+//						}
+						if(data == 2){
+							alert("用户名与密码不符")
+						}
+						else if(data == 0){
+							alert("用户名不存在")
+						}else{
+							localStorage.setItem("userName",account);  
+							location.href = "myXiu.html";
+						}
+					},
+					error: function(XHR, textStatus) {
+						console.log(XHR);
+						console.log(textStatus);
+					},
+					complete: function(data){
+						//console.log(data)
+					}
+				})
+//			.done(function(data){
+//					console.log(data)
+//				})
+//			.fail(function(XHR, textStatus) {
+//				console.log(XHR);
+//				console.log(textStatus);
+//			})
+		}
+	})
+    </script>
+</body>
+</html>

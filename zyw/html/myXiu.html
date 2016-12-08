@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../css/public.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/zxy_common.css"/>
+	<link rel="stylesheet" href="../lib/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="../font/commonFont/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="../css/myXiu.css"/>
+</head>
+<body>
+	<!--头部-->
+	<header>
+		<div class="title">我的秀</div>
+		<!--<div class="search">
+			<div class="searchInput">
+				<i class="iconfont icon-sousuolan-sousuo"></i>请输入搜索内容
+			</div>
+		</div>-->
+	</header>
+	<!--内容部分-->
+	<section style="margin-top: .86rem">
+		<!--我的秀部分开始-->
+		<div class="f-myXiuBox">
+			<!--用户信息-->
+			<div class="f-userMsg">
+				<!--用户头像-->
+				<div class="f-userImg"><img src="../img/myXiu/touxiang.jpg"/></div>
+				<dl class="f-userName">
+					<dt>昵称：<i id="userName">未知</i></dt>
+					<dd id="ifRegister"><span id="dengLu">登录</span><span id="zhuCe">注册</span></dd>
+				</dl>
+			</div>
+			<!--我的订单等信息-->
+			<div class="f-myOrder">
+				<p class="f-myOrder-list">我的订单<b>></b></p>
+				<p class="f-myOrder-list">我的优惠券<b>></b></p>
+				<p class="f-myOrder-list">浏览记录<b>></b></p>
+				<p class="f-myOrder-list">我的收藏<b>></b></p>
+			</div>
+		</div>
+	</section>
+	<!--尾部-->
+	<footer>
+		<p class="					footer-list"><i class="iconfont icon-shouyeshouye"></i><b class="footlist-name">首页</b></p>
+		<p class="footer-list"><i class="iconfont icon-wefill"></i><b class="footlist-name">分类</b></p>
+		<p class="footer-list"><i class="iconfont icon-cart"></i><b class="footlist-name">购物车</b></p>
+		<p class="footer-list active"><i class="iconfont icon-peoplelist"></i><b class="footlist-name">我的秀</b></p>
+		<p class="footer-list"><i class="iconfont icon-faxian2-copy"></i><b class="footlist-name">更多</b></p>
+	</footer>
+	<script src="../lib/zepto.min.js"></script>
+	<script src="../lib/iscroll.js"></script>
+	<script src="../lib/swiper.min.js"></script>
+	<script type="text/javascript" src="../js/homepage.js"></script>
+	<script type="text/javascript">
+    	document.documentElement.style.fontSize= document.documentElement.clientWidth/100 * 15.625 + "px";
+   		document.addEventListener('plusready', function(){
+   			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+   			
+   		});
+   		$('#ifRegister').delegate('#dengLu','touchend',function(){
+   			location.href = 'register.html'
+   		})
+   		$('#ifRegister').delegate('#zhuCe','touchend',function(){
+   			location.href = 'login.html'
+   		})
+   		$(function(){
+   			var zxyUser  = localStorage.getItem("userName");
+   			if(zxyUser){
+   				$("#userName").html(zxyUser);
+   				$('#ifRegister').html("<span id='returnRegister'>退出</span>")
+   			}
+   		})
+   		window.onload = function(){
+   		$('#returnRegister').on('touchend',function(){
+   			localStorage.removeItem("userName")
+   			$("#userName").html("未知");
+   			//location.reload();
+   			$('#ifRegister').html('<span id="dengLu">登录</span><span id="zhuCe">注册</span>')
+   		})
+   		}
+    </script>
+</body>
+</html>

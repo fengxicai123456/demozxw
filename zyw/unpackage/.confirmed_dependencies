@@ -1,0 +1,17 @@
+{
+  "html/register.html": {
+    "resources": [
+      "js/homepage.js",
+      "lib/swiper.min.css",
+      "font/commonFont/iconfont.woff",
+      "lib/swiper.min.js",
+      "lib/iscroll.js",
+      "css/zxy_common.css",
+      "css/register.css",
+      "lib/zepto.min.js",
+      "css/public.css",
+      "img/register/true.jpg",
+      "font/commonFont/iconfont.css"
+    ]
+  }
+}
