@@ -1,0 +1,108 @@
+/*字体*/
+@font-face {font-family: "iconfont";
+  src: url('//at.alicdn.com/t/font_ifre93239q0vn29.eot?t=1479352754626'); /* IE9*/
+  src: url('//at.alicdn.com/t/font_ifre93239q0vn29.eot?t=1479352754626#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/font_ifre93239q0vn29.woff?t=1479352754626') format('woff'), /* chrome, firefox */
+  url('//at.alicdn.com/t/font_ifre93239q0vn29.ttf?t=1479352754626') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/font_ifre93239q0vn29.svg?t=1479352754626#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-sousuo:before { content: "\e600"; }
+
+.icon-gengduo:before { content: "\e613"; }
+
+.icon-my:before { content: "\e607"; }
+
+.icon-fenlei:before { content: "\e601"; }
+
+.icon-gouwuche:before { content: "\e622"; }
+
+.icon-weibiaoti201:before { content: "\e602"; }
+
+.icon-shouyeshouye:before { content: "\e629"; }
+
+/*主体
+*/
+.main{
+	width: 100%;
+	height: 2.55rem;
+	background: #FF0000;
+  position: fixed;
+  left: 0;
+  top: 1.78rem; 
+   z-index: 2;
+}
+a{
+	color: #000000;
+}
+.main img{
+width: 100%;
+height: 100%;
+
+}
+.m-space{
+	width: 100%;
+ height:2.55rem;
+}
+.m-content{
+	height: auto;
+}
+section .m-merchandise{
+width: 100%;
+ height:2.22rem;	
+background-color:#fff;
+border-bottom: 0.02rem solid #ababab;
+display: flex;
+}
+section .m-merchandise .picture{
+		flex: 1;
+		align-self: center;
+	text-align: center;
+	width: 1.8rem;
+	height: 1.8rem;
+}
+
+section .m-merchandise .picture img{
+	width: 90%;
+	height: 90%;
+}
+section .m-merchandise .describe{
+	flex: 2;
+}
+section .m-merchandise .describe p{
+	        display: flex;
+           flex-direction: column;
+	      font-size: 0.28rem;
+          margin-top: 0.1rem;
+          margin-bottom: 0.2rem;
+          color: #8f8f94;
+          line-height: 0.42rem;
+          font-family: 'Helvetica Neue',Helvetica,sans-serif;
+}
+section .m-merchandise .describe div{
+display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+section .m-merchandise .describe div p span:nth-of-type(1){
+	font: 18px "微软雅黑";
+    color: #e53269;
+}
+section .m-merchandise .describe div b{
+	width: 1.2rem;
+     height: 0.5rem;
+    background-color: #e83c6e;
+    text-align: center;
+   font:0.5rem/0.6rem "微软雅黑";
+    color: #FFFFFF;
+    border-radius: 0.1rem;
+}
