@@ -11,7 +11,91 @@
       "lib/zepto.min.js",
       "css/public.css",
       "img/register/true.jpg",
-      "font/commonFont/iconfont.css"
+      "font/commonFont/iconfont.css",
+      "html/myXiu.html"
+    ],
+    "refer": []
+  },
+  "index.html": {
+    "resources": [
+      "css/homepage.css",
+      "lib/swiper.min.css",
+      "font/commonFont/iconfont.woff",
+      "img/homepage/hai.jpg",
+      "lib/swiper.min.js",
+      "html/list.html",
+      "css/zxy_common.css",
+      "lib/iscroll.js",
+      "css/public.css",
+      "lib/jquery-2.1.0.js",
+      "js/homepage.js",
+      "img/homepage/huan.jpg",
+      "img/homepage/hu.jpg",
+      "js/zxw_common.js",
+      "font/commonFont/iconfont.css",
+      "html/search.html",
+      "html/myXiu.html",
+      "html/more.html",
+      "html/seo.html"
+    ],
+    "refer": [
+      "html/list.html"
+    ]
+  },
+  "html/list.html": {
+    "resources": [
+      "index.html",
+      "css/list.css",
+      "img/listpage/yk_a.png",
+      "js/list.js",
+      "lib/zepto.min.js"
+    ],
+    "refer": [
+      "index.html"
+    ]
+  },
+  "html/search.html": {
+    "resources": [
+      "font/yk-font/iconfont.woff",
+      "css/seach.css",
+      "js/seach.js",
+      "html/seo.html",
+      "html/myXiu.html",
+      "html/more.html",
+      "index.html"
+    ],
+    "refer": []
+  },
+  "html/seo.html": {
+    "resources": [
+      "index.html",
+      "css/seo.css"
+    ],
+    "refer": [
+      "index.html"
+    ]
+  },
+  "html/more.html": {
+    "resources": [
+      "js/more.js",
+      "css/more.css",
+      "html/myXiu.html",
+      "index.html",
+      "html/search.html",
+      "lib/zepto.min.js"
+    ],
+    "refer": []
+  },
+  "html/myXiu.html": {
+    "resources": [
+      "img/myXiu/touxiang.jpg",
+      "css/myXiu.css",
+      "html/more.html",
+      "html/register.html",
+      "index.html"
+    ],
+    "refer": [
+      "html/more.html"
     ]
   }
 }

@@ -76,8 +76,8 @@ function loaded() {
 	scrollContent = new iScroll('m-box');
 
 }
-document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-document.addEventListener('DOMContentLoaded', loaded, false);	
+//document.addEventListener('touchstart', function (e) { e.preventDefault(); }, false);
+//document.addEventListener('DOMContentLoaded', loaded, false);	
 
 
 $('#m-box ul li').delegate('.m-merchandise .picture','touchstart',function(){

@@ -10,7 +10,3 @@ $('.homePage .footer-list').on('touchstart', function() {
 	location.href = homeHref[index];
 })
 
-$('header .search .searchInput').on('touchstart',function(){
-	//alert(location.pathname)                                             )
-	//location.href = 'seo.html';
-})

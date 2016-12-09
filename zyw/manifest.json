@@ -10,7 +10,7 @@
     "icons": {
         "72": "icon.png"
     },
-    "launch_path": "html/login.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+    "launch_path": "index.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
     "developer": {
         "name": "",/*开发者名称*/
         "email": "",/*开发者邮箱地址*/
@@ -214,7 +214,88 @@
 					"lib/zepto.min.js",
 					"css/public.css",
 					"img/register/true.jpg",
-					"font/commonFont/iconfont.css"
+					"font/commonFont/iconfont.css",
+					"html/myXiu.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"index.html": {
+				"resources": [
+					"css/homepage.css",
+					"lib/swiper.min.css",
+					"font/commonFont/iconfont.woff",
+					"img/homepage/hai.jpg",
+					"lib/swiper.min.js",
+					"html/list.html",
+					"css/zxy_common.css",
+					"lib/iscroll.js",
+					"css/public.css",
+					"lib/jquery-2.1.0.js",
+					"js/homepage.js",
+					"img/homepage/huan.jpg",
+					"img/homepage/hu.jpg",
+					"js/zxw_common.js",
+					"font/commonFont/iconfont.css",
+					"html/search.html",
+					"html/myXiu.html",
+					"html/more.html",
+					"html/seo.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/list.html": {
+				"resources": [
+					"index.html",
+					"css/list.css",
+					"img/listpage/yk_a.png",
+					"js/list.js",
+					"lib/zepto.min.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/search.html": {
+				"resources": [
+					"font/yk-font/iconfont.woff",
+					"css/seach.css",
+					"js/seach.js",
+					"html/seo.html",
+					"html/myXiu.html",
+					"html/more.html",
+					"index.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/seo.html": {
+				"resources": [
+					"index.html",
+					"css/seo.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/more.html": {
+				"resources": [
+					"js/more.js",
+					"css/more.css",
+					"html/myXiu.html",
+					"index.html",
+					"html/search.html",
+					"lib/zepto.min.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/myXiu.html": {
+				"resources": [
+					"img/myXiu/touxiang.jpg",
+					"css/myXiu.css",
+					"html/more.html",
+					"html/register.html",
+					"index.html"
 				],
 				"refer": [],
 				"priority": 0
@@ -222,31 +303,19 @@
 		},
 		"idle": {
 			"resources": [
-				"css/homepage.css",
-				"html/list.html",
 				"html/moban2.html",
 				"topFooter.html",
-				"js/seach.js",
-				"css/myXiu.css",
 				"html/login.html",
-				"html/search.html",
 				"font/commonFont/iconfont.eot",
 				"lib/swiper.animate.min.js",
-				"html/myXiu.html",
-				"css/list.css",
 				"font/commonFont/iconfont.js",
 				"font/commonFont/demo.css",
 				"font/commonFont/demo_fontclass.html",
 				"font/commonFont/iconfont.svg",
-				"css/seach.css",
 				"lib/touch.js",
-				"index.html",
-				"img/myXiu/touxiang.jpg",
-				"js/list.js",
 				"js/goods.js",
 				"css/goods.css",
 				"font/commonFont/demo_unicode.html",
-				"html/more.html",
 				"font/commonFont/demo_symbol.html",
 				"html/goods.html",
 				"font/commonFont/iconfont.ttf"

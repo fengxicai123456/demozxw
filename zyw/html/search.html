@@ -15,7 +15,7 @@
 <body>
 	<!--头部-->
 	<header>
-		<div class="title">zxiu 走秀网</div>
+		<div class="title">分类</div>
 		<div class="search">
 			<div class="searchInput">
 				<i class="iconfont icon-sousuolan-sousuo"></i>请输入搜索内容
@@ -52,6 +52,9 @@
 	<script src="../js/zxw_common.js"></script>
 	<script src="../lib/swiper.min.js"></script>
 	<script type="text/javascript">
+		$('header .search .searchInput').on('touchstart',function(){
+		location.href = 'seo.html'
+		})
     	document.documentElement.style.fontSize= document.documentElement.clientWidth/100 * 15.625 + "px";
    		document.addEventListener('plusready', function(){
    			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
