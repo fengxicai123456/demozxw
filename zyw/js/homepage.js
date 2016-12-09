@@ -26,7 +26,7 @@ function getajax1() {
 						var html =
 							'<div class="'+'m-merchandise m-m"'+'pid="'+ data[i].goodsID +'">'+
 	                    	'<div class="'+'picture">'+
-		                	'<a href="'+'#"><img src="'+ data[i].goodsListImg +'"/></a>'+
+		                	'<a ><img src="'+ data[i].goodsListImg +'"/></a>'+
 		                    '</div>'+
 							'<div class="'+'describe">'+
 						    '<p><a href="#">' + data[i].goodsName + '</a></p>' +
@@ -77,5 +77,11 @@ function loaded() {
 
 }
 document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-document.addEventListener('DOMContentLoaded', loaded, false);		
+document.addEventListener('DOMContentLoaded', loaded, false);	
+
+
+$('#m-box ul li').delegate('.m-merchandise .picture','touchstart',function(){
+	var pid = $(this).parents('.m-merchandise').attr('pid')
+	location.href = 'html/list.html?goodsId=' + pid;
+})
 		
