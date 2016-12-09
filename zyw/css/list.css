@@ -62,7 +62,7 @@ section>p{
 	display: inline-block;
 	width:.22rem;
 	height:.22rem;
-
+	background: #fff;
 	border-radius: 50%;
 	left:.29rem;
 	top:.33rem;

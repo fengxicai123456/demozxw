@@ -11,7 +11,7 @@ $(function(){
 	var shi  = parseInt((hm/3600000)%24)
 	var tian =  parseInt((hm/3600000)/24)
 	//console.log(tian+":"+shi+":"+fen+":"+miao)
-	console.log('距离结束时间:'+tian+'天'+shi+'时'+fen+'分'+miao+'秒')
+	//console.log('距离结束时间:'+tian+'天'+shi+'时'+fen+'分'+miao+'秒')
 	
 	$(".search span").html('距离结束时间:'+tian+'天'+shi+'时'+fen+'分'+miao+'秒')
 
