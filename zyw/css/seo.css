@@ -1,0 +1,16 @@
+header .return{
+	position: absolute;
+	left:0.2rem;
+}
+.f-seoList{
+	border: 1px solid #b6b6b6;
+	display: inline-block;
+	font-size: 0.36rem;
+	
+	padding:0.1rem;
+	border-radius: 0.3rem;
+	font-weight: normal;
+}
+.f-seoList:hover{
+	color: red;
+}
