@@ -35,7 +35,7 @@ $(function(){
 				if(data[i].goodsID == goodsId){
 					var a = data[i].price
 					var b = data[i].discount
-					var c = a*b/10
+					var c = parseInt(a*(1+b/10))
 				
 					var html =  '<div class="yk-list-img"><img src="'+data[i].goodsListImg+'"/></div>'+
 								  '<div class="yk-list-bq"><div class="yk-bq-left"></div><div class="yk-bq-z">￥'+data[i].price+'&nbsp;'+data[i].className+'</div><span class="yk-quan"></span></div>'+
