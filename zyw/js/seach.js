@@ -1,5 +1,5 @@
 $(function(){
-	var i =0;
+	var i =1;
 	$(".list-big").on("touchstart",function(){
 		i++
 		if(i%2 ==0){
