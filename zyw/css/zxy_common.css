@@ -64,11 +64,14 @@ header .title .login{
   header .search .searchInput .iconfont{
   	float:left;
   }
+  header .search  .seoInput{
+  	border:none;
+  	font-size: 0.3rem;
+  }
  section{
  	height:auto;
  	margin: 1.78rem 0  1rem 0;
-	width:100%;
-	background-color: #000;
+	width:100%; 
 }
 footer{
 	width:100%;
