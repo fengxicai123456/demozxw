@@ -63,3 +63,93 @@ body{
 .f-myXiuBox .f-myOrder .f-myOrder-list b{
 	float: right;
 }
+
+
+/*弹出项css样式*/
+
+.f-myXiuMark{
+	width:100%;
+	height:100%;
+	position: fixed;
+	top:0;
+	left:0;
+	z-index: 100;
+	background-color: rgba(0,0,0,0.4);
+	padding: 0 0.3rem;
+	box-sizing: border-box;
+	display: none;
+}
+.f-myXiuMark .closeMyxiuMarkP{
+	width:100%;
+	height:1rem;
+	font-size: 0.6rem;
+	line-height: 1rem;
+	
+}
+.f-myXiuMark .closeMyxiuMarkP .closeMyxiuMark{
+	float: right;
+}
+.f-myXiuMark .f-showMark{
+	width:100%;
+	font-size: .5rem;
+	height: 8rem;
+	overflow: auto;
+	border-radius: .4rem;
+	background-color:#fff;
+	border:1px solid  #aaa;
+	box-shadow: .1rem .1rem 1rem #fff;
+	
+}
+.f-myXiuMark .f-showMark .f-showMarkTitle{
+	text-align: center;
+	color:#000;
+	line-height: 1rem;
+	border-bottom: 1px solid  #aaa;
+}
+.f-myXiuMark .f-showMark .f-myXiuUser{
+	height:auto;
+	width:100%;
+}
+.f-myXiuMark .f-showMark .f-myXiuUser .myXiuUserLog{
+	display: flex;
+	width:100%;
+	height:2.3rem;
+	padding:.3rem;
+	box-sizing: border-box;
+	border-bottom: 1px solid #aaa;
+}
+.f-myXiuMark .f-showMark .f-myXiuUser .myXiuUserLog .userLogleft{
+	width: 2rem;
+	height:auto;
+	border: 1px solid #aaa;
+	overflow: hidden;
+}
+.f-myXiuMark .f-showMark .f-myXiuUser .myXiuUserLog .userLogleft img{
+	height:100%;
+	
+	
+}
+.f-myXiuMark .f-showMark .f-myXiuUser .myXiuUserLog .userLogRight{
+	font-size: .25rem;
+	flex: 1;
+	color: #000;
+	line-height: .4rem;
+	padding-left: .1rem;
+	position: relative;
+}
+.f-myXiuMark .f-showMark .f-myXiuUser .myXiuUserLog .userLogRight .goodsName{
+	height: .8rem;
+	
+}
+.f-myXiuMark .f-showMark .f-myXiuUser .myXiuUserLog .userLogRight .goodsPrice b{
+	color: #D6104E;
+}
+.f-myXiuMark .f-showMark .f-myXiuUser .myXiuUserLog .userLogRight .gouwuche{
+	position: absolute;
+	bottom: 0rem;
+	right:0rem;
+	background-color: #ee5782;
+	padding: .1rem .27rem;
+	border-radius: .2rem;
+	color: #fff;
+}

@@ -50,6 +50,75 @@
 		<p class="footer-list active"><i class="iconfont icon-peoplelist"></i><b class="footlist-name">我的秀</b></p>
 		<p class="footer-list"><i class="iconfont icon-faxian2-copy"></i><b class="footlist-name">更多</b></p>
 	</footer>
+	<div class="f-myXiuMark f-myXiuOrder">
+		<p class="closeMyxiuMarkP"><b class="closeMyxiuMark">X</b></p>
+		<div class="f-showMark">
+			<div class="f-showMarkTitle">我的订单</div>
+			<ul class="f-myXiuUser">
+				<li class="myXiuUserLog">
+					<div class="userLogleft">
+						<img src="../img/listpage/yk_a.png" alt="" />
+					</div>
+					<div class="userLogRight">
+						<h3 class="goodsName">阿尼玛眼极爱昂</h3>
+						<h3 class="goodsPrice">单价：<b>Y99</b></h3>
+						<p class="goodsSize">3.8折</p>
+						<i class=" gouwuche">查看物流</i>
+						<!--<i class="iconfont icon-cart gouwuche"></i>-->
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="f-myXiuMark f-myXiuYouHui" style="">
+		<p class="closeMyxiuMarkP"><b class="closeMyxiuMark">X</b></p>
+		<div class="f-showMark">
+			<div class="f-showMarkTitle">我的优惠券</div>
+			<ul class="f-myXiuUser">
+				暂无
+			</ul>
+		</div>
+		</div>
+	</div>
+	<div class="f-myXiuMark f-myXiuJiLu" >
+		<p class="closeMyxiuMarkP"><b class="closeMyxiuMark">X</b></p>
+		<div class="f-showMark">
+			<div class="f-showMarkTitle">浏览记录</div>
+			<ul class="f-myXiuUser">
+				<li class="myXiuUserLog">
+					<div class="userLogleft">
+						<img src="../img/listpage/yk_a.png" alt="" />
+					</div>
+					<div class="userLogRight">
+						<h3 class="goodsName">阿尼玛眼极爱昂</h3>
+						<h3 class="goodsPrice">单价：<b>Y99</b></h3>
+						<p class="goodsSize">3.8折</p>
+						<i class="iconfont icon-cart gouwuche"></i>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="f-myXiuMark f-myXiuShou">
+		<p class="closeMyxiuMarkP"><b class="closeMyxiuMark">X</b></p>
+		<div class="f-showMark">
+			<div class="f-showMarkTitle">我的收藏</div>
+			<ul class="f-myXiuUser">
+				<li class="myXiuUserLog">
+					<div class="userLogleft">
+						<img src="../img/listpage/yk_a.png" alt="" />
+					</div>
+					<div class="userLogRight">
+						<h3 class="goodsName">阿尼玛眼极爱昂</h3>
+						<h3 class="goodsPrice">单价：<b>Y99</b></h3>
+						<p class="goodsSize">3.8折</p>
+						<i class="gouwuche">取消收藏</i>
+					</div>
+				</li>
+			</ul>
+		</div>
+		</div>
+	</div>
 	<script src="../lib/zepto.min.js"></script>
 	<script src="../lib/iscroll.js"></script>
 	<script src="../lib/swiper.min.js"></script>
@@ -81,6 +150,13 @@
    			$('#ifRegister').html('<span id="dengLu">登录</span><span id="zhuCe">注册</span>')
    		})
    		}
+   		$('.f-myXiuMark .closeMyxiuMark').on('touchstart',function(){
+   			$(this).parents('.f-myXiuMark').hide(500)
+   		})
+   		$('.f-myOrder .f-myOrder-list').on('touchstart',function(){
+   			var index = $(this).index();
+   			$('.f-myXiuMark').eq(index).show(500);
+   		})
     </script>
 </body>
 </html>
