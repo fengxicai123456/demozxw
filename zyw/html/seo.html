@@ -19,6 +19,7 @@
 		<div class="search">
 			<div class="searchInput">
 				<i class="iconfont icon-sousuolan-sousuo"></i><input type="text" placeholder="请输入搜索内容" class="seoInput"/>
+				<ul class="baiduSeo"></ul>
 			</div>
 		</div>
 	</header>
@@ -26,7 +27,7 @@
 		
 	<section>
 		<b class="f-seoList">衬衫</b>
-		<b class="f-seoList">女装T恤</b>
+		<b class="f-seoList">T恤</b>
 		<b class="f-seoList">珠宝配饰</b>
 		<b class="f-seoList">美食保健</b>
 		<b class="f-seoList">化妆品</b>
@@ -41,6 +42,7 @@
 		<b class="f-seoList">美食保健</b>
 		<b class="f-seoList">化妆品</b>
 		<b class="f-seoList">品牌</b>
+		<button id="btnSeo" class="f-btnSeo">搜索</button>
 	</section>
 	<script src="../lib/zepto.min.js"></script>
 	<script src="../lib/iscroll.js"></script>
@@ -51,6 +53,36 @@
    			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
    			
    		});
+   		$(".seoInput").keyup(function(){
+			var val=$(".seoInput").val();
+			$.ajax({
+				url:"https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd="+val,
+				dataType:"jsonp",
+				jsonp:"cb",
+				success:function(data){
+					$(".baiduSeo").show()
+					if(data.s){
+						var str=''
+					
+						$(data.s).each(function(i,obj){
+							str+="<li>"+this+"</li>"
+						})
+						$(".baiduSeo").html(str)
+					}
+				}
+			})
+		})
+   		$(".baiduSeo").delegate('li','touchstart',function(){
+   			$(".seoInput").val($(this).html());
+   			$(".baiduSeo").hide()
+   		})
+   		$('section .f-seoList').on('touchstart',function(){
+   			$(".seoInput").val($(this).html());
+   		})
+//		$("#btn").click(function(){
+//			var val=$("#search").val();
+//			location.href="https://www.baidu.com/s?ie=utf-8&wd="+val;
+//		})
     </script>
 </body>
 </html>

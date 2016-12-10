@@ -51,6 +51,9 @@
    			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
    			
    		});
+   		$('header .title .login').on('touchstart',function(){
+   			window.location.href = 'register.html'
+   		})
    		  		//----------------------------------------------------------------失去焦点
 //id为input的id  失去焦点事件    zz 为正则表达式------------
      function checkBlur(id,zz){
@@ -93,7 +96,7 @@
 	$("#repetPwd").focus(checkFocus); 
 	function repetPwd(){
 		var pwd = $("#pwd").val();
-		var repetP = $(this).val();
+		var repetP = $("#repetPwd").val();
 		//console.log(pwd + "---" + repetP)
 		if(pwd == repetP){
 			//$(this).siblings('i').css('display','none')
@@ -105,7 +108,7 @@
 	}
 //  4 ---------------------------------------登录提交
 	$('#loginZxy').on('touchstart',function(){
-		if(checkBlur("account",sjyz)&&checkBlur("pwd",szmm)){
+		if(checkBlur("account",sjyz)&&checkBlur("pwd",szmm)&&repetPwd()){
 			var account = $("#account").val();
 			var pwd = $("#pwd").val();
 			$.ajax({
@@ -122,7 +125,7 @@
 							location.href = "myXiu.html";
 						}
 						if(data == 2){
-							alert("注册成功")
+							alert("数据库报错，重新注册")
 						}
 						if(data == 0){
 							alert("用户名已存在")

@@ -60,7 +60,10 @@ getajax1();
 				
 			
 				if(itm == null){
-				window.location.href = "html/myXiu.html"
+					var denglu = window.confirm("您还没有登录，请登录")
+					if(denglu){
+					window.location.href = "html/register.html"
+					}
 			}else{
 				$.ajax({
 					type:"get",

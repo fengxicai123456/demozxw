@@ -50,6 +50,9 @@
    		$('#remindPwd').on('touchend',function(){
    			$(this).toggleClass('active')
    		})
+   		$('header .title .login').on('touchstart',function(){
+   			window.location.href = 'login.html'
+   		})
    		//----------------------------------------------------------------失去焦点
 //id为input的id  失去焦点事件    zz 为正则表达式------------
      function checkBlur(id,zz){
