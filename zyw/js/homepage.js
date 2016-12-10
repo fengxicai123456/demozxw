@@ -52,23 +52,82 @@ function getajax1() {
 		}
 getajax1();
 //2部分      购物车信息提取
+		var pid=0; 
 		$("#m-box").delegate("b", "touchstart", function() {
-			var pid = $(this).parents(".m-merchandise").attr("pid");
-			alert(pid);
-			//console.log("http://datainfo.duapp.com/shopdata/updatecar.php?userID=wangjie&goodsID="+pid+"&number=1")
-			$.ajax({
-					type: "GET",
-					url: "http://datainfo.duapp.com/shopdata/updatecar.php?userID=wangjie&goodsID="+pid+"&number=1",
-					async: true,
-					dataType: "json"
-				})
-			.done(function(data){
-					console.log(data)
-				})
-			.fail(function(XHR, textStatus) {
-				console.log(XHR);
-				console.log(textStatus);
-			})
+			pid = $(this).parents(".m-merchandise").attr("pid");
+			var itm = localStorage.getItem("userName")
+			//alert(itm)
+				
+			
+				if(itm == null){
+				window.location.href = "html/myXiu.html"
+			}else{
+				$.ajax({
+					type:"get",
+					dataType:"jsonp",
+					url:"http://datainfo.duapp.com/shopdata/getCar.php?userID="+itm,
+					async:true,
+					success:function(data){
+						var num =0;
+						
+						//console.log(data)
+						var m=0
+					if(data.length == undefined){
+				
+						$.ajax({
+								type:"get",
+								url:"http://datainfo.duapp.com/shopdata/updatecar.php?userID="+itm+"&goodsID="+pid+"&number=1",
+								async:true,
+								success:function(){
+									console.log("第一次添加")
+								}
+							});
+						
+					}
+					for(var i=0;i<data.length;i++){
+						//console.log(pid)
+						if(pid == data[i].goodsID){
+							num = parseInt(data[i].number)+1
+							//alert(pid)
+							$.ajax({
+								type:"get",
+								url:"http://datainfo.duapp.com/shopdata/updatecar.php?userID="+itm+"&goodsID="+pid+"&number="+num,
+								async:true,
+								success:function(){
+									console.log("第一次之后")
+								}
+							});
+							
+							return;
+							
+						}
+					 m = m +1
+					
+					}
+					// alert(m)
+					if(m == data.length){
+						//alert(pid)
+						$.ajax({
+								type:"get",
+								url:"http://datainfo.duapp.com/shopdata/updatecar.php?userID="+itm+"&goodsID="+pid+"&number=1",
+								async:true,
+								success:function(){
+									console.log("第一次添加")
+								}
+							});
+					}
+						
+						
+						
+					}
+				});
+				
+				
+				
+				
+			}
+			
+			
 		});
 		
 var scrollContent;
