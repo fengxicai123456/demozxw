@@ -45,4 +45,11 @@ $(".ta").css("display","none");
 		$(".out").html("请登入");
 		}
    	
+	   	$('section').delegate('.out','touchstart',function(){
+	   		//alert($('.out').html())
+			if( $('.out').html() == "请登入"){
+				window.location.href = 'register.html'
+			}
+		})
    		}
+	

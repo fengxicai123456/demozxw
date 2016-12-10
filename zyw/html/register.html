@@ -48,7 +48,8 @@
    			
    		});
    		$('#remindPwd').on('touchend',function(){
-   			$(this).toggleClass('active')
+   			$(this).toggleClass('active');
+   			
    		})
    		$('header .title .login').on('touchstart',function(){
    			window.location.href = 'login.html'
@@ -110,6 +111,11 @@
 						}else{
 							localStorage.setItem("userName",account);  
 							location.href = "myXiu.html";
+							if($('#remindPwd').attr("class") == "f-remindPwd active"){
+				   				localStorage.setItem("userMsg",[account,pwd]); 
+				   			}else{
+				   				localStorage.removeItem("userMsg")
+				   			}
 						}
 					},
 					error: function(XHR, textStatus) {
@@ -121,6 +127,13 @@
 				})
 		}
 	})
+	var zxyMsg  = localStorage.getItem("userMsg");
+   			if(zxyMsg){
+   				
+   				var msg = zxyMsg.split(',')
+   				$("#account").val(msg[0]);
+				$("#pwd").val(msg[1]);
+   			}
     </script>
 </body>
 </html>

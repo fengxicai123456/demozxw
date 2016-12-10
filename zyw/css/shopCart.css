@@ -15,8 +15,8 @@
 }
 
 .z-money{background: #333;height:.91rem;width:calc(100% - 0.22rem);font-size: .28rem;color:#fff;line-height: .91rem;padding-left: .22rem;font-family: "微软雅黑";}
-.z-money span:nth-child(2){margin-left: .38rem;}
-.list-cart{width:calc(100% - 0.66rem);padding: .33rem;}
+.z-money span:nth-child(2){margin-left: .18rem;display: inline-block;}
+.list-cart{width:calc(100% - 0.66rem);padding: .33rem;height:auto;overflow: hidden;}
 .list-cart dt{width:1.71rem;height: 1.67rem;float: left;margin-bottom:.33rem;}
 .list-cart dt img{width:1.71rem;height: 1.67rem;}
 .list-cart dd{width:3.9rem;height:1.67rem;float: right;font-size: .31rem;margin-bottom:.33rem;}
