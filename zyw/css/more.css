@@ -15,8 +15,7 @@
 	background: #fff;
 	border-radius:0.4rem;	
 	font-size: 0.3rem;
-	border: 1px solid #dedede;
-		
+	border: 1px solid #dedede;		
 	}
 .m-service .servicetwo{
 	margin-top:0.5rem;
@@ -71,3 +70,90 @@ border-bottom: 1px solid #dedede;
 		text-align: center;
 		line-height:0.9rem;
 }
+/*加*/
+.dew{
+	display: block;
+	width: 105%;
+	position: relative;
+	left:-5.6%;
+	 height:5.5rem;
+	 z-index:2;
+	 background: #fff;
+	 border-radius:0 0 0.4rem 0.4rem;
+	 border: 1px solid #dedede;
+	 display: none;
+}
+.de{
+	display: block;
+	width: 110%;
+	 height:6.5rem;
+	position: relative;
+	left:-8.6%;	
+	top: -4rem;
+	background: #fff;
+	text-align: center;
+	display: none;
+	position: relative;
+	z-index: 100;
+}
+.de img{
+	width: 80%;
+	height: 80%;
+	margin-top: 0.5rem;
+	}
+.de .deri{
+	display: block;
+	line-height: 0.5rem;
+	position: absolute;
+	right:0;
+	top: 0;
+	width: 0.5rem;
+	height: 0.5rem;
+}
+.ta{
+display: block;
+	width: 110%;
+	 height:6.5rem;
+	position: relative;
+	left:-8.6%;	
+	top: -5.2rem;
+	background: #fff;
+	z-index: 100;
+	border-radius:0.4rem;
+	display: none;		
+}
+.ta1{
+	width: 90%;
+	height: 80%;
+margin-left: 5%;
+border: none;
+resize: none;
+	
+	
+}
+.ta2{
+	display: block;
+	width: 100%;
+	height: 20%;	
+	position: absolute;
+	bottom: 0;
+}
+.ta3{
+	display: block;
+	width: 60%;
+	height: 70%;
+	background:#e6356b;
+	margin: 0 auto;
+	border-radius: 0.4rem;
+    margin-top: 0.2rem;
+    text-align: center;
+    color: #FFf;
+}
+.taa{
+	top: -6.2rem;
+}
+.taa1{
+	margin: 0;
+	text-align:center;
+	padding-top: 2rem;	
+} 
