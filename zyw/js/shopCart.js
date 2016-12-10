@@ -25,7 +25,7 @@ function user(){
 											'<p>'+data[i].goodsName+'<i class="iconfont">&#xe61f;</i></p>'+
 											'<p>'+data[i].className+'</p>'+
 											'<p>单价：<span>￥'+data[i].price+'<i></i></span><i>L</i></p>'+
-											'<p>数量：<span class="iconfont jian" data-pid='+data[i].goodsID+'>&#xe620;</span><input type="text" disabled="disabled" value='+data[i].number+'><span class="iconfont">&#xe626;</span></p>'+
+											'<p>数量：<span class="iconfont jian" data-pid='+data[i].goodsID+'>&#xe620;</span><input type="text" disabled="disabled" value='+data[i].number+'><span data-pid='+data[i].goodsID+' class="iconfont jia">&#xe626;</span></p>'+
 										'</dd>'+
 										
 									'</dl>'
@@ -79,6 +79,57 @@ function user(){
 							
 							
 						})
+						
+							
+						$(".jia").on("touchstart",function(){
+						
+							var pid = $(this).attr("data-pid")
+							//alert($(this).attr("data-pid"))
+							$.ajax({
+								type:"get",
+								url:"http://datainfo.duapp.com/shopdata/getCar.php?userID="+itm,
+								dataType:"jsonp",
+								async:true,
+								success:function(data){
+									//console.log(data)
+									for(var i=0;i<data.length;i++){
+										if(pid == data[i].goodsID){
+											var ss = parseInt(data[i].number)+1
+											
+											
+											//console.log(ss+":"+pid+":"+itm)
+											$.ajax({
+												type:"get",
+												url:"http://datainfo.duapp.com/shopdata/updatecar.php?userID="+itm+"&goodsID="+pid+"&number="+ss,
+												async:true,
+											
+												success:function(data){
+													user()
+												}
+												
+											});
+											
+										
+											
+										}
+									
+									}
+									
+								}
+							});	
+							
+							
+						})	
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
 						
 						
 					}
