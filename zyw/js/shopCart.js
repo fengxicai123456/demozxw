@@ -6,8 +6,11 @@ function user(){
 				
 			
 				if(itm == null){
-				window.location.href = "html/myXiu.html"
+					$("section").css("display","none")
+			alert('您的购物车空虚了.')
+			
 			}else{
+				$("section").css("display","block")
 				$.ajax({
 					type:"get",
 					dataType:"jsonp",
