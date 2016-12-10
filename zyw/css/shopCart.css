@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'iconfont';
+  src: url('../font/yk-font/iconfont.eot');
+  src: url('../font/yk-font/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('../font/yk-font/iconfont.woff') format('woff'),
+  url('../font/yk-font/iconfont.ttf') format('truetype'),
+  url('../font/yk-font/iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:16px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.z-money{background: #333;height:.91rem;width:calc(100% - 0.22rem);font-size: .28rem;color:#fff;line-height: .91rem;padding-left: .22rem;font-family: "微软雅黑";}
+.z-money span:nth-child(2){margin-left: .38rem;}
+.list-cart{width:calc(100% - 0.66rem);padding: .33rem;}
+.list-cart dt{width:1.71rem;height: 1.67rem;float: left;margin-bottom:.33rem;}
+.list-cart dt img{width:1.71rem;height: 1.67rem;}
+.list-cart dd{width:3.9rem;height:1.67rem;float: right;font-size: .31rem;margin-bottom:.33rem;}
+
+.list-cart p {float: right;width:100%;height:.40rem;line-height:.40rem ;}
+.list-cart i{float: right;}
+.list-cart p:nth-of-type(1){font-size:.20rem;overflow: hidden;}
+.list-cart p:nth-of-type(3) span{color: #FF0057;}
+.list-cart p:nth-of-type(4) input{width:.75rem;text-align: center;margin:0 .16rem;height:.40;}
+.list-cart p:nth-of-type(4) span{display:inline-block;text-align:center;width:.58rem;height:.4rem;font-size:.20rem;color:#fff;background: -webkit-gradient(linear, 0 0, 0 100%, from(#a0a0a0), to(#676767));border: 1px solid #e0e0e0;border-radius: .1rem;}
