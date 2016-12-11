@@ -24,6 +24,7 @@
 .list-cart p {float: right;width:100%;height:.40rem;line-height:.40rem ;}
 .list-cart i{float: right;}
 .list-cart p:nth-of-type(1){font-size:.20rem;overflow: hidden;}
+.list-cart p:nth-of-type(1) span{width:70%;float:left;}
 .list-cart p:nth-of-type(3) span{color: #FF0057;}
 .list-cart p:nth-of-type(4) input{width:.75rem;text-align: center;margin:0 .16rem;height:.40;}
 .list-cart p:nth-of-type(4) span{display:inline-block;text-align:center;width:.58rem;height:.4rem;font-size:.20rem;color:#fff;background: -webkit-gradient(linear, 0 0, 0 100%, from(#a0a0a0), to(#676767));border: 1px solid #e0e0e0;border-radius: .1rem;}
