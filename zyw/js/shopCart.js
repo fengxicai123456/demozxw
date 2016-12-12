@@ -48,6 +48,7 @@ function user(){
 							//alert($(this).attr("data-pid"))
 							var inputNumber = $(this).siblings('.inputValue').val()
 							var inputText =  $(this).siblings('.inputValue').val(--inputNumber);
+							var flag = true;
 							if(inputNumber == 0){
 								var flag = window.confirm('确定删除该商品');
 								if(flag){$(this).parents('dl').remove()
@@ -67,8 +68,10 @@ function user(){
 										if(pid == data[i].goodsID){
 											var ss = inputNumber;
 											//alert(data[i].price* ss)
+											if(flag){
 											$(".z-money-num").html( (+$(".z-money-num").html() - +data[i].price).toFixed(2))
 											$(".z-money-my").html( +$(".z-money-my").html() - 1)
+											}
 											//console.log(ss+":"+pid+":"+itm)
 											$.ajax({
 												type:"get",
