@@ -35,7 +35,7 @@ function getajax1() {
 							'<span>￥' + data[i].price + '</span>' +
 							'<span>' + data[i].discount + '折</span>' +
 							'</p>' +
-							'<b class="mui-icon icon iconfont icon-gouwuche" ></b>' +
+							'<b class="mui-icon icon iconfont icon-cart" ></b>' +
 						    '</div>'+
 							'</div>'+
 						    '</div>'

@@ -166,7 +166,6 @@ function user(){
 													url:"http://datainfo.duapp.com/shopdata/updatecar.php?userID="+itm+"&goodsID="+pid+"&number="+ss,
 													async:true,
 													success:function(data){
-														
 													}
 													
 												});

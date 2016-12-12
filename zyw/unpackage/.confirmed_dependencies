@@ -14,7 +14,9 @@
       "font/commonFont/iconfont.css",
       "html/myXiu.html"
     ],
-    "refer": []
+    "refer": [
+      "html/myXiu.html"
+    ]
   },
   "index.html": {
     "resources": [
@@ -36,10 +38,13 @@
       "html/search.html",
       "html/myXiu.html",
       "html/more.html",
-      "html/seo.html"
+      "html/seo.html",
+      "html/register.html"
     ],
     "refer": [
-      "html/list.html"
+      "html/list.html",
+      "html/search.html",
+      "html/register.html"
     ]
   },
   "html/list.html": {
@@ -62,9 +67,13 @@
       "html/seo.html",
       "html/myXiu.html",
       "html/more.html",
-      "index.html"
+      "index.html",
+      "lib/zepto.min.js",
+      "html/shopCart.html"
     ],
-    "refer": []
+    "refer": [
+      "html/shopCart.html"
+    ]
   },
   "html/seo.html": {
     "resources": [
@@ -82,9 +91,12 @@
       "html/myXiu.html",
       "index.html",
       "html/search.html",
-      "lib/zepto.min.js"
+      "lib/zepto.min.js",
+      "img/more/erwei.png"
     ],
-    "refer": []
+    "refer": [
+      "index.html"
+    ]
   },
   "html/myXiu.html": {
     "resources": [
@@ -92,10 +104,23 @@
       "css/myXiu.css",
       "html/more.html",
       "html/register.html",
-      "index.html"
+      "index.html",
+      "img/listpage/yk_a.png"
     ],
     "refer": [
+      "html/more.html",
+      "index.html"
+    ]
+  },
+  "html/shopCart.html": {
+    "resources": [
+      "css/shopCart.css",
+      "js/shopCart.js",
+      "html/myXiu.html",
       "html/more.html"
+    ],
+    "refer": [
+      "html/myXiu.html"
     ]
   }
 }
