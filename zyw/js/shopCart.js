@@ -25,7 +25,7 @@ function user(){
 							html = '<dl>'+
 										'<dt><img src='+data[i].goodsListImg+'></dt>'+
 										'<dd>'+
-											'<p>'+data[i].goodsName+'<i class="iconfont delThisGoods">&#xe61f;</i></p>'+
+											'<p><span>'+data[i].goodsName+'</span><i class="iconfont delThisGoods">&#xe61f;</i></p>'+
 											'<p>'+data[i].className+'</p>'+
 											'<p>单价：<span>￥'+data[i].price+'<i></i></span><i>L</i></p>'+
 											'<p>数量：<span class="iconfont jian" data-pid='+data[i].goodsID+'>&#xe620;</span><input class="inputValue" type="text" disabled="disabled" value='+data[i].number+'><span data-pid='+data[i].goodsID+' class="iconfont jia">&#xe626;</span></p>'+
@@ -86,7 +86,7 @@ function user(){
 										
 											
 										}
-									
+								
 									}
 									
 								}
@@ -144,6 +144,7 @@ function user(){
 							var pid = $(this).parents('dl').find('.jia').attr("data-pid");
 							
 							var flag = window.confirm('确定删除该商品');
+							console.log(flag)
 								if(flag){
 									$(this).parents('dl').remove();
 									
